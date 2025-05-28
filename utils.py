@@ -1,6 +1,6 @@
 def binary_cleanup(data):
-  data= data.copy()
-  data['Gender'] = data['Gender'].map({'Map': 1, 'Female':0})
-  data['OverTime']= data['OverTime'].map({'Yes': 1, 'No': 0})
-  drop_cols=['EmployeeCount', 'Over18','StandardHours','EmployeeNumber']
-  return data.drop(columns=drop_cols)
+    data = data.copy()
+    data['Gender'] = data['Gender'].map({'Male': 1, 'Female': 0})
+    data['OverTime'] = data['OverTime'].map({'Yes': 1, 'No': 0})
+    drop_cols = ['EmployeeCount', 'Over18', 'StandardHours', 'EmployeeNumber']
+    return data.drop(columns=drop_cols)
